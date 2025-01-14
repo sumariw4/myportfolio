@@ -427,7 +427,12 @@ main {
   font-size: var(--fs-7);
 }
 
-.contact-info address { font-style: normal; }
+.contact-info address { 
+  font-style: normal; 
+  color: var(--light-gray-70);
+}
+
+..contact-info a { font-style: normal; }
 
 .social-list {
   display: flex;
