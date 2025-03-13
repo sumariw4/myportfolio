@@ -717,7 +717,7 @@ main {
 .service-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-3);
+  font-weight: var(--fw-300);;
   line-height: 1.6;
 }
 
@@ -885,6 +885,123 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+
+/**
+ * #portfolio-modal
+ */
+
+.portfolio-modal-container {
+  padding: 20px;
+}
+
+.portfolio-modal {
+  background: var(--eerie-black-2);
+  position: relative;
+  padding: 20px;
+  margin: 15px 12px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  transform: scale(1.2);
+  opacity: 0;
+  transition: var(--transition-1);
+  z-index: 2;
+  max-width: 90%;
+  width: 800px;
+}
+
+.modal-container.active .portfolio-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.portfolio-modal-img-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.portfolio-modal-title {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: var(--white-2);
+  text-align: center;
+}
+
+.portfolio-modal-img {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.portfolio-modal-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.portfolio-modal-category {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  margin-bottom: 10px;
+}
+
+.portfolio-modal-description {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.portfolio-modal-technologies {
+  margin-bottom: 20px;
+}
+
+.portfolio-modal-technologies h4 {
+  color: var(--white-2);
+  margin-bottom: 10px;
+}
+
+.portfolio-modal-technologies ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.portfolio-modal-technologies li {
+  background: var(--jet);
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+}
+
+.portfolio-modal-link a {
+  display: inline-block;
+  background: var(--orange-yellow-crayola);
+  color: var(--eerie-black-1);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: var(--transition-1);
+}
+
+.portfolio-modal-link a:hover {
+  background: var(--vegas-gold);
+}
+
+/* Portfolio Modal - Responsive adjustments */
+@media (min-width: 768px) {
+  .portfolio-modal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 }
 
 
@@ -1187,9 +1304,9 @@ main {
 }
 
 .project-category {
-  color: var(--light-gray-70);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  color: var (--light-gray-70);
+  font-size: var (--fs-6);
+  font-weight: var (--fw-300);
 }
 
 
@@ -1449,6 +1566,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   cursor: pointer;
   font-size: var(--fs-8); /* Smaller font */
   transition: var(--transition-1);
+  position: relative;
 }
 
 .lang-btn:hover {
@@ -1458,6 +1576,21 @@ textarea.form-input::-webkit-resizer { display: none; }
 .lang-btn.active {
   background: var(--onyx);
   color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-500);
+  box-shadow: var(--shadow-1);
+}
+
+/* Add bottom indicator for active language */
+.lang-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 2px;
+  background: var(--orange-yellow-crayola);
+  border-radius: 1px;
 }
 
 .theme-toggle ion-icon {
@@ -2176,4 +2309,23 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/* Theme-specific text colors */
+:root.dark-theme .service-item-text,
+:root.dark-theme .about-text,
+:root.dark-theme .testimonials-text,
+:root.dark-theme .timeline-text,
+:root.dark-theme .portfolio-modal-description,
+:root.dark-theme .blog-text {
+  color: var(--light-gray);
+}
+
+:root.light-theme .service-item-text,
+:root.light-theme .about-text,
+:root.light-theme .testimonials-text,
+:root.light-theme .timeline-text,
+:root.light-theme .portfolio-modal-description,
+:root.light-theme .blog-text {
+  color: var(--light-gray);
 }

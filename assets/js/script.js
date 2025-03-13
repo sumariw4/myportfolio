@@ -179,6 +179,108 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+// Portfolio modal variables
+const portfolioItems = document.querySelectorAll("[data-portfolio-item]");
+const portfolioModalContainer = document.querySelector("[data-portfolio-modal-container]");
+const portfolioModalCloseBtn = document.querySelector("[data-portfolio-modal-close-btn]");
+const portfolioOverlay = document.querySelector("[data-portfolio-overlay]");
+const portfolioModalImg = document.querySelector("[data-portfolio-modal-img]");
+const portfolioModalTitle = document.querySelector("[data-portfolio-modal-title]");
+const portfolioModalCategory = document.querySelector("[data-portfolio-modal-category]");
+const portfolioModalDescription = document.querySelector("[data-portfolio-modal-description]");
+const portfolioModalTechnologies = document.querySelector("[data-portfolio-modal-technologies]");
+const portfolioModalLink = document.querySelector("[data-portfolio-modal-link]");
+
+// Portfolio modal toggle function
+const portfolioModalFunc = function () {
+  portfolioModalContainer.classList.toggle("active");
+  portfolioOverlay.classList.toggle("active");
+}
+
+// Add click event to all portfolio items
+portfolioItems.forEach(item => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default link behavior
+
+    // Get the project image
+    const projectImg = this.querySelector(".project-img img");
+    portfolioModalImg.src = projectImg.src;
+    portfolioModalImg.alt = projectImg.alt;
+    
+    // Get the project title
+    const projectTitle = this.querySelector(".project-title");
+    portfolioModalTitle.textContent = projectTitle.textContent;
+    
+    // Get the project category
+    const projectCategory = this.querySelector(".project-category");
+    portfolioModalCategory.textContent = projectCategory.textContent;
+    
+    // Get the project details from hidden content
+    const portfolioDetails = this.querySelector(".portfolio-details");
+    
+    if (portfolioDetails) {
+      // Get description
+      const description = portfolioDetails.querySelector(".portfolio-description");
+      if (description) {
+        portfolioModalDescription.textContent = description.textContent;
+      } else {
+        portfolioModalDescription.textContent = "No description available.";
+      }
+      
+      // Get technologies
+      const technologies = portfolioDetails.querySelector(".portfolio-technologies");
+      // Clear previous technologies
+      portfolioModalTechnologies.innerHTML = "";
+      
+      if (technologies && technologies.querySelectorAll("li").length > 0) {
+        // Add each technology
+        const techItems = technologies.querySelectorAll("li");
+        techItems.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item.textContent;
+          portfolioModalTechnologies.appendChild(li);
+        });
+      } else {
+        // Add a default "No technologies listed" item
+        const li = document.createElement("li");
+        li.textContent = "No technologies listed";
+        portfolioModalTechnologies.appendChild(li);
+      }
+      
+      // Get link
+      const link = portfolioDetails.querySelector(".portfolio-link");
+      if (link) {
+        portfolioModalLink.href = link.getAttribute("href");
+        portfolioModalLink.textContent = link.textContent;
+      } else {
+        portfolioModalLink.href = "#";
+        portfolioModalLink.textContent = "Project not available";
+      }
+    } else {
+      // Set default values if no details are provided
+      portfolioModalDescription.textContent = "No description available for this project.";
+      portfolioModalTechnologies.innerHTML = "";
+      const li = document.createElement("li");
+      li.textContent = "No technologies listed";
+      portfolioModalTechnologies.appendChild(li);
+      portfolioModalLink.href = "#";
+      portfolioModalLink.textContent = "Project not available";
+    }
+    
+    // Open modal
+    portfolioModalFunc();
+  });
+});
+
+// Add click event to modal close button and overlay
+if (portfolioModalCloseBtn) {
+  portfolioModalCloseBtn.addEventListener("click", portfolioModalFunc);
+}
+
+if (portfolioOverlay) {
+  portfolioOverlay.addEventListener("click", portfolioModalFunc);
+}
+
 // Language handling
 let currentLang = 'id';
 let translations = {};
@@ -188,8 +290,20 @@ async function loadTranslations() {
         const response = await fetch(`./assets/lang/${currentLang}.json`);
         translations = await response.json();
         updatePageContent();
+        
+        // Update active state on language buttons after loading translations
+        updateActiveLanguageButton();
     } catch (error) {
         console.error('Error loading translations:', error);
+    }
+
+    // Update Portfolio modal texts based on language
+    if (translations.portfolio && translations.portfolio.modal) {
+        // Update modal texts if they exist in translations
+        const techTitle = document.querySelector('.portfolio-modal-technologies h4');
+        if (techTitle && translations.portfolio.modal.technologiesUsed) {
+            techTitle.textContent = translations.portfolio.modal.technologiesUsed;
+        }
     }
 }
 
@@ -434,16 +548,24 @@ function changeLanguage(lang) {
     currentLang = lang;
     document.documentElement.lang = lang;
     
+    // Save selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
+    
     // Update active state on language buttons
+    updateActiveLanguageButton();
+    
+    loadTranslations();
+}
+
+// Helper function to update the active state of language buttons
+function updateActiveLanguageButton() {
     document.querySelectorAll('.lang-btn').forEach(btn => {
-        if (btn.getAttribute('data-lang') === lang) {
+        if (btn.getAttribute('data-lang') === currentLang) {
             btn.classList.add('active');
         } else {
             btn.classList.remove('active');
         }
     });
-    
-    loadTranslations();
 }
 
 // Theme handling
@@ -458,17 +580,18 @@ function toggleTheme() {
     setTheme(newTheme);
 }
 
-// Initialize theme from localStorage or default to dark theme
+// Initialize theme and language
 document.addEventListener('DOMContentLoaded', () => {
     // Set theme
     const savedTheme = localStorage.getItem('theme') || 'dark-theme';
     setTheme(savedTheme);
     
-    // Set language
-    const defaultLangButton = document.querySelector(`.lang-btn[data-lang="${currentLang}"]`);
-    if (defaultLangButton) {
-        defaultLangButton.classList.add('active');
-    }
+    // Get saved language or default to Indonesian
+    currentLang = localStorage.getItem('selectedLanguage') || 'id';
+    document.documentElement.lang = currentLang;
+    
+    // Set active state on language button
+    updateActiveLanguageButton();
     
     loadTranslations();
     

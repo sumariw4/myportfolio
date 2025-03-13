@@ -99,6 +99,11 @@
       "applications": "Aplikasi",
       "webDevelopment": "Pengembangan Web",
       "selectCategory": "Pilih kategori"
+    },
+    "modal": {
+      "technologiesUsed": "Teknologi yang digunakan:",
+      "viewLive": "Lihat Proyek",
+      "notAvailable": "Proyek tidak tersedia"
     }
   },
   "blog": {

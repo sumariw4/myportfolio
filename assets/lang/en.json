@@ -99,6 +99,11 @@
       "applications": "Applications",
       "webDevelopment": "Web development",
       "selectCategory": "Select category"
+    },
+    "modal": {
+      "technologiesUsed": "Technologies used:",
+      "viewLive": "View Live Project",
+      "notAvailable": "Project not available"
     }
   },
   "blog": {
