@@ -34,8 +34,8 @@
         "text": "Developing mobile applications for both Android and iOS platforms."
       },
       {
-        "title": "Design",
-        "text": "Designing UI/UX using Adobe tools (Photoshop, Illustrator, XD) and Figma."
+        "title": "Digital Marketing",
+        "text": "Developing SEO strategies, social media campaigns, and content marketing for brand growth."
       },
       {
         "title": "ISO 9001:2015 and 27001:2022",
@@ -107,7 +107,12 @@
     }
   },
   "blog": {
-    "title": "Blog"
+    "title": "Blog",
+    "readMore": "Read More",
+    "modal": {
+      "postedOn": "Posted on",
+      "noContent": "No content available for this blog post."
+    }
   },
   "contact": {
     "title": "Contact",

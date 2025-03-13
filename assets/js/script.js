@@ -281,6 +281,102 @@ if (portfolioOverlay) {
   portfolioOverlay.addEventListener("click", portfolioModalFunc);
 }
 
+// Blog modal variables
+const blogItems = document.querySelectorAll("[data-blog-item]");
+const blogModalContainer = document.querySelector("[data-blog-modal-container]");
+const blogModalCloseBtn = document.querySelector("[data-blog-modal-close-btn]");
+const blogOverlay = document.querySelector("[data-blog-overlay]");
+const blogModalImg = document.querySelector("[data-blog-modal-img]");
+const blogModalTitle = document.querySelector("[data-blog-modal-title]");
+const blogModalCategory = document.querySelector("[data-blog-modal-category]");
+const blogModalDate = document.querySelector("[data-blog-modal-date]");
+const blogModalText = document.querySelector("[data-blog-modal-text]");
+
+// Blog modal toggle function
+const blogModalFunc = function () {
+  blogModalContainer.classList.toggle("active");
+  blogOverlay.classList.toggle("active");
+}
+
+// Add click event to all blog items
+blogItems.forEach(item => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default link behavior
+
+    // Get the blog image
+    const blogImg = this.querySelector(".blog-banner-box img");
+    blogModalImg.src = blogImg.src;
+    blogModalImg.alt = blogImg.alt;
+    
+    // Get the blog title
+    const blogTitle = this.querySelector(".blog-item-title");
+    blogModalTitle.textContent = blogTitle.textContent;
+    
+    // Get the blog category
+    const blogCategory = this.querySelector(".blog-category");
+    blogModalCategory.textContent = blogCategory.textContent;
+    
+    // Get the blog date
+    const blogDate = this.querySelector(".blog-meta time");
+    if (blogDate) {
+      blogModalDate.textContent = blogDate.textContent;
+      blogModalDate.setAttribute("datetime", blogDate.getAttribute("datetime"));
+    }
+    
+    // Get the blog details from hidden content
+    const blogDetails = this.querySelector(".blog-details");
+    
+    // Clear previous blog text content
+    blogModalText.innerHTML = "";
+    
+    if (blogDetails) {
+      // Get detailed text paragraphs
+      const detailParagraphs = blogDetails.querySelectorAll(".blog-detail-text");
+      if (detailParagraphs.length > 0) {
+        detailParagraphs.forEach(paragraph => {
+          const p = document.createElement("p");
+          p.textContent = paragraph.textContent;
+          blogModalText.appendChild(p);
+        });
+      } else {
+        // If no detail paragraphs, use the brief text
+        const briefText = this.querySelector(".blog-text");
+        if (briefText) {
+          const p = document.createElement("p");
+          p.textContent = briefText.textContent;
+          blogModalText.appendChild(p);
+          
+          // Add a placeholder paragraph
+          const p2 = document.createElement("p");
+          p2.textContent = "More details about this topic will be added soon.";
+          blogModalText.appendChild(p2);
+        } else {
+          const p = document.createElement("p");
+          p.textContent = "No content available for this blog post.";
+          blogModalText.appendChild(p);
+        }
+      }
+    } else {
+      // Set default values if no details are provided
+      const p = document.createElement("p");
+      p.textContent = "No content available for this blog post.";
+      blogModalText.appendChild(p);
+    }
+    
+    // Open modal
+    blogModalFunc();
+  });
+});
+
+// Add click event to modal close button and overlay
+if (blogModalCloseBtn) {
+  blogModalCloseBtn.addEventListener("click", blogModalFunc);
+}
+
+if (blogOverlay) {
+  blogOverlay.addEventListener("click", blogModalFunc);
+}
+
 // Language handling
 let currentLang = 'id';
 let translations = {};

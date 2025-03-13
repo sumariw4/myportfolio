@@ -34,8 +34,8 @@
         "text": "Mengembangkan aplikasi mobile untuk platform Android dan iOS."
       },
       {
-        "title": "Desain",
-        "text": "Merancang UI/UX menggunakan alat Adobe (Photoshop, Illustrator, XD) dan Figma."
+        "title": "Digital Marketing",
+        "text": "Mengembangkan strategi SEO, kampanye media sosial, dan pemasaran konten untuk pertumbuhan brand."
       },
       {
         "title": "ISO 9001:2015 dan 27001:2022",
@@ -107,7 +107,12 @@
     }
   },
   "blog": {
-    "title": "Blog"
+    "title": "Blog",
+    "readMore": "Baca Selengkapnya",
+    "modal": {
+      "postedOn": "Diposting pada",
+      "noContent": "Tidak ada konten tersedia untuk posting blog ini."
+    }
   },
   "contact": {
     "title": "Kontak",
