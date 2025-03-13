@@ -109,11 +109,157 @@
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 
+  /* Theme transition */
+  --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Dark mode (default) */
+:root, :root.dark-theme {
+  /* Dark theme colors */
+  /* gradient */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(240, 1%, 25%) 3%, 
+    hsl(0, 0%, 19%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right, 
+    hsla(240, 1%, 18%, 0.251) 0%, 
+    hsla(240, 2%, 11%, 0) 100%
+  ), hsl(240, 2%, 13%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right, 
+    hsl(45, 100%, 71%) 0%, 
+    hsla(36, 100%, 69%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg, 
+    hsla(45, 100%, 71%, 0.251) 0%, 
+    hsla(35, 100%, 68%, 0) 59.86%
+  ), hsl(240, 2%, 13%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 25%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right, 
+    hsl(45, 100%, 72%), 
+    hsl(35, 100%, 68%)
+  );
 
+  /* solid */
+  --jet: hsl(0, 0%, 22%);
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+  --smoky-black: hsl(0, 0%, 7%);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --vegas-gold: hsl(45, 54%, 58%);
+  --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
 
+  /* Shadow variables */
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  
+  /* Text colors */
+  --text-primary: var(--white-2);
+  --text-secondary: var(--light-gray);
+  --text-accent: var(--orange-yellow-crayola);
+  
+  /* Background colors */
+  --bg-primary: var(--smoky-black);
+  --bg-secondary: var(--eerie-black-2);
+  --bg-accent: var(--onyx);
 
+  /* Navbar specific background for dark mode */
+  --navbar-bg: hsla(240, 1%, 17%, 0.75);
+  --navbar-border: var(--jet);
+}
+
+/* Light mode theme */
+:root.light-theme {
+  /* Light theme colors */
+  /* gradient */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(240, 1%, 90%) 3%, 
+    hsl(0, 0%, 85%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right, 
+    hsla(240, 1%, 80%, 0.251) 0%, 
+    hsla(240, 2%, 90%, 0) 100%
+  ), hsl(240, 2%, 95%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right, 
+    hsl(45, 100%, 50%) 0%, 
+    hsla(36, 100%, 69%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg, 
+    hsla(45, 100%, 50%, 0.251) 0%, 
+    hsla(35, 100%, 68%, 0) 59.86%
+  ), hsl(240, 2%, 95%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 75%) 0%, 
+    hsla(0, 0%, 75%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right, 
+    hsl(45, 100%, 45%), 
+    hsl(35, 100%, 40%)
+  );
+
+  /* solid */
+  --jet: hsl(0, 0%, 80%);
+  --onyx: hsl(240, 1%, 85%);
+  --eerie-black-1: hsl(240, 2%, 90%);
+  --eerie-black-2: hsl(240, 2%, 95%);
+  --smoky-black: hsl(0, 0%, 95%);
+  --white-1: hsl(0, 0%, 10%);
+  --white-2: hsl(0, 0%, 15%);
+  --orange-yellow-crayola: hsl(45, 100%, 45%);
+  --vegas-gold: hsl(45, 54%, 40%);
+  --light-gray: hsl(0, 0%, 30%);
+  --light-gray-70: hsla(0, 0%, 30%, 0.7);
+  --bittersweet-shimmer: hsl(0, 43%, 40%);
+
+  /* Shadow variables */
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.1);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.1);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.1);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.05);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.1);
+  
+  /* Text colors */
+  --text-primary: var(--white-2);
+  --text-secondary: var(--light-gray);
+  --text-accent: var(--orange-yellow-crayola);
+  
+  /* Background colors */
+  --bg-primary: var(--smoky-black);
+  --bg-secondary: var(--eerie-black-2);
+  --bg-accent: var(--onyx);
+
+  /* Navbar specific background for light mode */
+  --navbar-bg: hsla(240, 1%, 85%, 0.75);
+  --navbar-border: var(--jet);
+}
+
+/* Apply transition to elements that will change with theme */
+body, .sidebar, article, .navbar, .service-item, .project-item > a,
+.blog-post-item > a, .form-input, button, .icon-box, .content-card {
+  transition: var(--theme-transition);
+}
 
 /*-----------------------------------*\
   #RESET
@@ -432,7 +578,7 @@ main {
   color: var(--light-gray-70);
 }
 
-..contact-info a { font-style: normal; }
+.contact-info a { font-style: normal; }
 
 .social-list {
   display: flex;
@@ -464,9 +610,9 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--jet);
+  border: 1px solid var(--navbar-border);
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
@@ -492,9 +638,24 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+/* Fix light mode navbar text colors */
+:root.light-theme .navbar-link {
+  color: var(--light-gray);
+}
 
+:root.light-theme .navbar-link:hover,
+:root.light-theme .navbar-link:focus {
+  color: var(--light-gray-70);
+}
 
+:root.light-theme .navbar-link.active {
+  color: var(--orange-yellow-crayola);
+}
 
+/* Light mode map view adjustment */
+:root.light-theme .mapbox iframe {
+  filter: grayscale(1);
+}
 
 /*-----------------------------------*\
   #ABOUT
@@ -925,10 +1086,10 @@ main {
 }
 
 .select-item button {
-  background: var(--eerie-black-2);
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  background: var (--eerie-black-2);
+  color: var (--light-gray);
+  font-size: var (--fs-6);
+  font-weight: var (--fw-300);
   text-transform: capitalize;
   width: 100%;
   padding: 8px 10px;
@@ -1229,6 +1390,138 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+
+/*-----------------------------------*\
+  #LANGUAGE SWITCHER & THEME TOGGLE
+\*-----------------------------------*/
+
+/* Title container to position controls in mobile view */
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Smaller controls */
+.language-switcher {
+  position: static;
+  z-index: 5;
+}
+
+.theme-toggle {
+  position: static;
+  z-index: 5;
+  width: 30px;  /* Smaller size */
+  height: 30px; /* Smaller size */
+  background: var(--eerie-black-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--jet);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition-1);
+}
+
+/* New sidebar controls container */
+.sidebar-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-selector {
+  display: flex;
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+.lang-btn {
+  background: none;
+  color: var(--light-gray);
+  border: none;
+  padding: 4px 8px; /* Smaller padding */
+  cursor: pointer;
+  font-size: var(--fs-8); /* Smaller font */
+  transition: var(--transition-1);
+}
+
+.lang-btn:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+.lang-btn.active {
+  background: var(--onyx);
+  color: var(--orange-yellow-crayola);
+}
+
+.theme-toggle ion-icon {
+  color: var(--orange-yellow-crayola);
+  font-size: 16px; /* Smaller icon */
+}
+
+/* Hide desktop controls in mobile and vice versa */
+.desktop-controls {
+  display: none; 
+  margin-top: 10px;
+}
+
+.mobile-controls {
+  display: flex;
+}
+
+/* Hide either sun or moon icon based on current theme */
+:root.dark-theme .theme-toggle .sun-icon {
+  display: none;
+}
+
+:root.light-theme .theme-toggle .moon-icon {
+  display: none;
+}
+
+
+/* Media query for tablet and larger screens */
+@media (min-width: 580px) {
+  .theme-toggle {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .theme-toggle ion-icon {
+    font-size: 18px;
+  }
+  
+  .lang-btn {
+    padding: 5px 10px;
+    font-size: var(--fs-7);
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 1250px) {
+  .mobile-controls {
+    display: none;
+  }
+  
+  .desktop-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  
+  .title-container {
+    display: block; /* Stack in desktop mode */
+  }
+  
+  .info-content .title {
+    margin: auto;
+  }
+}
 
 /*-----------------------------------*\
   #RESPONSIVE
@@ -1834,7 +2127,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     max-height: max-content;
     height: 100%;
     margin-bottom: 0;
-    padding-top: 60px;
     z-index: 1;
   }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="UTF-8">
@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -48,7 +49,39 @@
         <div class="info-content">
           <h1 class="name" title="Sumari">Sumari</h1>
 
-          <p class="title">DevOps Engineer</p>
+          <div class="title-container">
+            <p class="title">DevOps Engineer</p>
+
+            <!-- Move controls here for mobile view -->
+            <div class="sidebar-controls mobile-controls">
+              <div class="language-switcher">
+                <div class="language-selector">
+                  <button class="lang-btn" onclick="changeLanguage('id')" data-lang="id">ID</button>
+                  <button class="lang-btn" onclick="changeLanguage('en')" data-lang="en">EN</button>
+                </div>
+              </div>
+
+              <div class="theme-toggle" onclick="toggleTheme()">
+                <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+                <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add controls here for desktop view -->
+          <div class="sidebar-controls desktop-controls">
+            <div class="language-switcher">
+              <div class="language-selector">
+                <button class="lang-btn" onclick="changeLanguage('id')" data-lang="id">ID</button>
+                <button class="lang-btn" onclick="changeLanguage('en')" data-lang="en">EN</button>
+              </div>
+            </div>
+
+            <div class="theme-toggle" onclick="toggleTheme()">
+              <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+              <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+            </div>
+          </div>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -102,7 +135,7 @@
             <div class="contact-info">
               <p class="contact-title">Website</p>
 
-              <a href="https://taraseo.com/" target="_blank">taraseo.com</a>
+              <a href="https://taraseo.com/" target="_blank" class="contact-link">taraseo.com</a>
             </div>
 
           </li>
@@ -146,6 +179,8 @@
           </li>
 
         </ul>
+
+        <div class="separatorp"></div>
 
       </div>
 
@@ -203,10 +238,15 @@
 
         <section class="about-text">
           <p>
-            I am a 32-year-old male who is honest, disciplined, diligent, and skilled in developing Desktop Programs, Web Applications (E-Learning, E-Commerce, ERP), and Mobile Applications (Android, iOS). I have a solid understanding of ISO standards (9001:2015, 27001:2022) and excel at collaborating with others in a team environment.
+            I am a 32-year-old male who is honest, disciplined, diligent, and skilled in developing Desktop Programs,
+            Web Applications (E-Learning, E-Commerce, ERP), and Mobile Applications (Android, iOS). I have a solid
+            understanding of ISO standards (9001:2015, 27001:2022) and excel at collaborating with others in a team
+            environment.
           </p>
           <p>
-            I currently work as a DevOps Engineer, responsible for designing the technologies used to develop solutions such as Servers, RESTful APIs, Backends, and Frontends. My role extends beyond development to include optimization, ensuring that the programs I build deliver maximum performance.
+            I currently work as a DevOps Engineer, responsible for designing the technologies used to develop solutions
+            such as Servers, RESTful APIs, Backends, and Frontends. My role extends beyond development to include
+            optimization, ensuring that the programs I build deliver maximum performance.
           </p>
         </section>
 
@@ -556,7 +596,8 @@
               <span>2011 — 2013</span>
 
               <p class="timeline-text">
-                Managing and maintaining computer networks, managing and maintaining servers, managing and maintaining web applications.
+                Managing and maintaining computer networks, managing and maintaining servers, managing and maintaining
+                web applications.
               </p>
 
             </li>
@@ -569,10 +610,11 @@
 
               <p class="timeline-text">
                 Managing Information Technology and computer systems:
-                <br/>
+                <br />
                 - Developing and implementing IT policies and procedures, including IT security policies.
-                <br/>
-                - Designing, managing, monitoring, and evaluating the operation of information systems (software and applications) and their supporting infrastructure (hardware, telecommunications).
+                <br />
+                - Designing, managing, monitoring, and evaluating the operation of information systems (software and
+                applications) and their supporting infrastructure (hardware, telecommunications).
               </p>
 
             </li>
@@ -614,9 +656,11 @@
                 <br />
                 - Creating and maintaining servers using Linux.
                 <br />
-                - Developing and maintaining RESTful APIs using PHP (Laravel), NodeJS (ExpressJS), MongoDB, PostgreSQL, MySQL.
+                - Developing and maintaining RESTful APIs using PHP (Laravel), NodeJS (ExpressJS), MongoDB, PostgreSQL,
+                MySQL.
                 <br />
-                - Developing and maintaining back-end systems using PHP (Laravel), NodeJS (ReactJS + TypeScript), Axios, Apollo Client, GraphQL, tRPC.
+                - Developing and maintaining back-end systems using PHP (Laravel), NodeJS (ReactJS + TypeScript), Axios,
+                Apollo Client, GraphQL, tRPC.
                 <br />
                 - Developing and maintaining front-end systems using ReactJS, NextJS, TypeScript, and TailwindCSS.
               </p>

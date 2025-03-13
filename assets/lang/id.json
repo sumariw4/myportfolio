@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "about": "Tentang",
+    "resume": "Resume",
+    "portfolio": "Portofolio",
+    "blog": "Blog",
+    "contact": "Kontak"
+  },
+  "sidebar": {
+    "showContacts": "Tampilkan Kontak",
+    "hideContacts": "Sembunyikan Kontak",
+    "title": "DevOps Engineer",
+    "contact": {
+      "email": "Email",
+      "phone": "Telepon",
+      "website": "Website",
+      "location": "Lokasi"
+    }
+  },
+  "about": {
+    "title": "Tentang saya",
+    "text": [
+      "Saya adalah pria berusia 32 tahun yang jujur, disiplin, rajin, dan terampil dalam mengembangkan Program Desktop, Aplikasi Web (E-Learning, E-Commerce, ERP), dan Aplikasi Mobile (Android, iOS). Saya memiliki pemahaman yang kuat tentang standar ISO (9001:2015, 27001:2022) dan unggul dalam berkolaborasi dengan orang lain dalam lingkungan tim.",
+      "Saat ini saya bekerja sebagai DevOps Engineer, bertanggung jawab untuk merancang teknologi yang digunakan untuk mengembangkan solusi seperti Server, RESTful API, Backend, dan Frontend. Peran saya melampaui pengembangan untuk mencakup optimalisasi, memastikan bahwa program yang saya buat memberikan kinerja maksimal."
+    ],
+    "workingOn": "Apa yang saya kerjakan?",
+    "services": [
+      {
+        "title": "DevOps Engineer",
+        "text": "Mengembangkan dan Memantau RESTful API, Back-End, dan Front-End."
+      },
+      {
+        "title": "Aplikasi Mobile",
+        "text": "Mengembangkan aplikasi mobile untuk platform Android dan iOS."
+      },
+      {
+        "title": "Desain",
+        "text": "Merancang UI/UX menggunakan alat Adobe (Photoshop, Illustrator, XD) dan Figma."
+      },
+      {
+        "title": "ISO 9001:2015 dan 27001:2022",
+        "text": "Menerapkan dan Memantau standar ISO (9001:2015, 27001:2022)."
+      }
+    ],
+    "testimonials": "Kata Mereka",
+    "clients": "Klien"
+  },
+  "resume": {
+    "title": "Resume",
+    "education": {
+      "title": "Pendidikan",
+      "items": [
+        {
+          "school": "Politeknik Tri Mitra Karya Mandiri",
+          "years": "2014 — 2017",
+          "description": "Di sini, saya mempelajari Teknik Komputer dan mendapatkan banyak pengetahuan yang sangat bermanfaat."
+        }
+      ]
+    },
+    "experience": {
+      "title": "Pengalaman Kerja",
+      "items": [
+        {
+          "position": "IT Support",
+          "years": "2011 — 2013",
+          "description": "Mengelola dan memelihara jaringan komputer, mengelola dan memelihara server, mengelola dan memelihara aplikasi web."
+        },
+        {
+          "position": "IT Manager, Doc. ISO 9001:2008, Support HRD",
+          "years": "2014 — 2017",
+          "description": "Mengelola Teknologi Informasi dan sistem komputer:\n- Mengembangkan dan menerapkan kebijakan dan prosedur IT, termasuk kebijakan keamanan IT.\n- Merancang, mengelola, memantau, dan mengevaluasi operasi sistem informasi (perangkat lunak dan aplikasi) dan infrastruktur pendukungnya (perangkat keras, telekomunikasi)."
+        },
+        {
+          "position": "IT Manager, MR ISO 9001:2015",
+          "years": "2017 — 2019",
+          "description": "Menerapkan Zahir Flaxy Trade 6 dan menerapkan ISO 9001:2015."
+        },
+        {
+          "position": "Web Developer and MR ISO 9001:2015",
+          "years": "2017 — 2019",
+          "description": "- Membuat Website Menggunakan HTML, CSS, JavaScript, PHP, dan MySQL\n- Menerapkan dan Memelihara ISO 9001:2015"
+        },
+        {
+          "position": "DevOps Engineer and ISO 27001:2022",
+          "years": "2019 — Sekarang",
+          "description": "- Penerapan dan Pemantauan ISO 27001:2022.\n- Membuat dan memelihara server menggunakan Linux.\n- Mengembangkan dan memelihara RESTful API menggunakan PHP (Laravel), NodeJS (ExpressJS), MongoDB, PostgreSQL, MySQL.\n- Mengembangkan dan memelihara sistem back-end menggunakan PHP (Laravel), NodeJS (ReactJS + TypeScript), Axios, Apollo Client, GraphQL, tRPC.\n- Mengembangkan dan memelihara sistem front-end menggunakan ReactJS, NextJS, TypeScript, dan TailwindCSS."
+        }
+      ]
+    },
+    "skills": {
+      "title": "Keahlian dan Kemampuan"
+    }
+  },
+  "portfolio": {
+    "title": "Portofolio",
+    "filter": {
+      "all": "Semua",
+      "webDesign": "Desain Web",
+      "applications": "Aplikasi",
+      "webDevelopment": "Pengembangan Web",
+      "selectCategory": "Pilih kategori"
+    }
+  },
+  "blog": {
+    "title": "Blog"
+  },
+  "contact": {
+    "title": "Kontak",
+    "form": {
+      "title": "Formulir Kontak",
+      "fullname": "Nama Lengkap",
+      "email": "Alamat Email",
+      "message": "Pesan Anda",
+      "send": "Kirim Pesan"
+    }
+  }
+}

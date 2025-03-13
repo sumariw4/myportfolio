@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "about": "About",
+    "resume": "Resume",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "sidebar": {
+    "showContacts": "Show Contacts",
+    "hideContacts": "Hide Contacts",
+    "title": "DevOps Engineer",
+    "contact": {
+      "email": "Email",
+      "phone": "Phone",
+      "website": "Website",
+      "location": "Location"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "text": [
+      "I am a 32-year-old male who is honest, disciplined, diligent, and skilled in developing Desktop Programs, Web Applications (E-Learning, E-Commerce, ERP), and Mobile Applications (Android, iOS). I have a solid understanding of ISO standards (9001:2015, 27001:2022) and excel at collaborating with others in a team environment.",
+      "I currently work as a DevOps Engineer, responsible for designing the technologies used to develop solutions such as Servers, RESTful APIs, Backends, and Frontends. My role extends beyond development to include optimization, ensuring that the programs I build deliver maximum performance."
+    ],
+    "workingOn": "What am I working on?",
+    "services": [
+      {
+        "title": "DevOps Engineer",
+        "text": "Developing and Monitoring RESTful APIs, Back-End, and Front-End."
+      },
+      {
+        "title": "Mobile apps",
+        "text": "Developing mobile applications for both Android and iOS platforms."
+      },
+      {
+        "title": "Design",
+        "text": "Designing UI/UX using Adobe tools (Photoshop, Illustrator, XD) and Figma."
+      },
+      {
+        "title": "ISO 9001:2015 and 27001:2022",
+        "text": "Implementing and Monitoring ISO standards (9001:2015, 27001:2022)."
+      }
+    ],
+    "testimonials": "Testimonials",
+    "clients": "Clients"
+  },
+  "resume": {
+    "title": "Resume",
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "school": "Politeknik Tri Mitra Karya Mandiri",
+          "years": "2014 — 2017",
+          "description": "Here, I studied Computer Engineering and gained a wealth of knowledge that has been very beneficial."
+        }
+      ]
+    },
+    "experience": {
+      "title": "Work Experience",
+      "items": [
+        {
+          "position": "IT Support",
+          "years": "2011 — 2013",
+          "description": "Managing and maintaining computer networks, managing and maintaining servers, managing and maintaining web applications."
+        },
+        {
+          "position": "IT Manager, Doc. ISO 9001:2008, Support HRD",
+          "years": "2014 — 2017",
+          "description": "Managing Information Technology and computer systems:\n- Developing and implementing IT policies and procedures, including IT security policies.\n- Designing, managing, monitoring, and evaluating the operation of information systems (software and applications) and their supporting infrastructure (hardware, telecommunications)."
+        },
+        {
+          "position": "IT Manager, MR ISO 9001:2015",
+          "years": "2017 — 2019",
+          "description": "Implementing Zahir Flaxy Trade 6 and applying ISO 9001:2015."
+        },
+        {
+          "position": "Web Developer and MR ISO 9001:2015",
+          "years": "2017 — 2019",
+          "description": "- Creating a Website Using HTML, CSS, JavaScript, PHP, and MySQL\n- Implementing and Maintaining ISO 9001:2015"
+        },
+        {
+          "position": "DevOps Engineer and ISO 27001:2022",
+          "years": "2019 — Present",
+          "description": "- Implementation and Monitoring of ISO 27001:2022.\n- Creating and maintaining servers using Linux.\n- Developing and maintaining RESTful APIs using PHP (Laravel), NodeJS (ExpressJS), MongoDB, PostgreSQL, MySQL.\n- Developing and maintaining back-end systems using PHP (Laravel), NodeJS (ReactJS + TypeScript), Axios, Apollo Client, GraphQL, tRPC.\n- Developing and maintaining front-end systems using ReactJS, NextJS, TypeScript, and TailwindCSS."
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills and Expertise"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "filter": {
+      "all": "All",
+      "webDesign": "Web design",
+      "applications": "Applications",
+      "webDevelopment": "Web development",
+      "selectCategory": "Select category"
+    }
+  },
+  "blog": {
+    "title": "Blog"
+  },
+  "contact": {
+    "title": "Contact",
+    "form": {
+      "title": "Contact Form",
+      "fullname": "Full name",
+      "email": "Email address",
+      "message": "Your Message",
+      "send": "Send Message"
+    }
+  }
+}
