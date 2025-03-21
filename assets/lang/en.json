@@ -103,8 +103,12 @@
     "modal": {
       "technologiesUsed": "Technologies used:",
       "viewLive": "View Live Project",
-      "notAvailable": "Project not available"
-    }
+      "notAvailable": "Project not available",
+      "noDescription": "No description available."
+    },
+    "printButton": "Print Portfolio",
+    "generatedOn": "Generated on",
+    "moreProjects": "Showing 6 of the latest projects. Visit website to see more."
   },
   "blog": {
     "title": "Blog",

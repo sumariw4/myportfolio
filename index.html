@@ -56,9 +56,14 @@
             <div class="sidebar-controls mobile-controls">
               <div class="language-switcher">
                 <div class="language-selector">
-                  <button class="lang-btn" onclick="changeLanguage('id')" data-lang="id">ID</button>
-                  <button class="lang-btn" onclick="changeLanguage('en')" data-lang="en">EN</button>
+                  <button class="lang-btn" data-lang="id">ID</button>
+                  <button class="lang-btn" data-lang="en">EN</button>
                 </div>
+              </div>
+
+              <!-- Add print button to mobile controls -->
+              <div class="print-btn-small" id="printPortfolioBtnMobile">
+                <ion-icon name="print-outline"></ion-icon>
               </div>
 
               <div class="theme-toggle" onclick="toggleTheme()">
@@ -72,9 +77,14 @@
           <div class="sidebar-controls desktop-controls">
             <div class="language-switcher">
               <div class="language-selector">
-                <button class="lang-btn" onclick="changeLanguage('id')" data-lang="id">ID</button>
-                <button class="lang-btn" onclick="changeLanguage('en')" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="id">ID</button>
+                <button class="lang-btn" data-lang="en">EN</button>
               </div>
+            </div>
+
+            <!-- Add print button to desktop controls -->
+            <div class="print-btn-small" id="printPortfolioBtnDesktop">
+              <ion-icon name="print-outline"></ion-icon>
             </div>
 
             <div class="theme-toggle" onclick="toggleTheme()">
@@ -865,6 +875,7 @@
         </header>
 
         <section class="projects">
+          <!-- Remove the print button from here -->
 
           <ul class="filter-list">
 
@@ -1597,15 +1608,69 @@
 
   </main>
 
+  <!-- Add the print container (hidden except when printing) -->
+  <div class="print-container" style="display: none;">
+    <div class="print-header">
+      <!-- Avatar will be added via JavaScript -->
+      <div class="print-name">Sumari</div>
+      <div class="print-title">DevOps Engineer</div>
+      <div class="print-contact">
+        <span><ion-icon name="mail-outline"></ion-icon> sumari.w4@gmail.com</span>
+        <span><ion-icon name="phone-portrait-outline"></ion-icon> +62 (814) 1092-9492</span>
+        <span><ion-icon name="globe-outline"></ion-icon> taraseo.com</span>
+        <span><ion-icon name="location-outline"></ion-icon> Tangerang, Banten 15810</span>
+      </div>
+    </div>
 
+    <div class="print-section">
+      <h2 class="print-section-title">About Me</h2>
+      <p class="print-about">
+        I am a 32-year-old male who is honest, disciplined, diligent, and skilled in developing Desktop Programs,
+        Web Applications (E-Learning, E-Commerce, ERP), and Mobile Applications (Android, iOS). I have a solid
+        understanding of ISO standards (9001:2015, 27001:2022) and excel at collaborating with others in a team
+        environment.
+      </p>
+      <p class="print-about">
+        I currently work as a DevOps Engineer, responsible for designing the technologies used to develop solutions
+        such as Servers, RESTful APIs, Backends, and Frontends. My role extends beyond development to include
+        optimization, ensuring that the programs I build deliver maximum performance.
+      </p>
+    </div>
 
+    <div class="print-section">
+      <h2 class="print-section-title">Professional Experience</h2>
+      <div class="print-experience-list">
+        <!-- Experience will be populated dynamically by JavaScript -->
+      </div>
+    </div>
 
+    <div class="print-section">
+      <h2 class="print-section-title">Skills & Expertise</h2>
+      <div class="print-skills-list">
+        <!-- Skills will be populated dynamically by JavaScript -->
+      </div>
+    </div>
 
+    <div class="print-section">
+      <h2 class="print-section-title">Portfolio Projects</h2>
+      <div class="print-project-list">
+        <!-- Projects will be populated dynamically by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Footer will be added dynamically via JavaScript -->
+  </div>
 
   <!--
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+
+  <!-- Add print functionality script -->
+  <script src="./assets/js/print-portfolio.js"></script>
+
+  <!-- Add language-print synchronization script -->
+  <script src="./assets/js/lang-print-sync.js"></script>
 
   <!--
     - ionicon link

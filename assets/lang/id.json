@@ -103,8 +103,12 @@
     "modal": {
       "technologiesUsed": "Teknologi yang digunakan:",
       "viewLive": "Lihat Proyek",
-      "notAvailable": "Proyek tidak tersedia"
-    }
+      "notAvailable": "Proyek tidak tersedia",
+      "noDescription": "Tidak ada deskripsi tersedia."
+    },
+    "printButton": "Cetak Portofolio",
+    "generatedOn": "Dibuat pada",
+    "moreProjects": "Menampilkan 6 proyek terbaru. Kunjungi situs web untuk melihat lebih banyak."
   },
   "blog": {
     "title": "Blog",
